@@ -15,9 +15,7 @@ if not combined_headlines.is_file():
     head_4 = pd.read_csv('../data/scraped/2016_2017.csv')
     headlines = head_1.append([head_2, head_3, head_4])
     headlines.to_csv('../data/scraped/combined_headlines.csv')
-
 headlines = pd.read_csv('../data/scraped/combined_headlines.csv')
-
 stripped = headlines.titles.apply(lambda x: x.strip('"\' ' ))
 headlines_clean = headlines[~headlines.titles.duplicated(keep='first')]
 
