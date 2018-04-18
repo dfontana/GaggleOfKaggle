@@ -105,6 +105,34 @@ def parallelize(data, func):
 
 
 
+tqdm().pandas(desc="Fuzzy Match")
+FIRSTN = 15000
+
+def fuzzy_match(x, choices, scorer, cutoff):
+    if x == '' or type(x) != str:
+        return
+    return process.extractOne(x, choices=choices, scorer=scorer, score_cutoff=cutoff)
+    
+
+# Parallelization function, to run on each split of data
+def appfun(df):
+    return df.loc[:, 'entities'].progress_apply(
+        fuzzy_match,
+        args=(
+            ticker.loc[:, 'company'].map(lambda x: x.lower()), 
+            fuzz.ratio,
+            70
+        )
+    )
+
+
+matching_results = parallelize(headline_entities, appfun)
+test = headline_entities.copy()
+test['match'] = matching_results
+test['match'] = test['match'].dropna()
+test.to_csv("../data/fuzzy_match.csv")
+
+""" Prositional Based Matching
 tick_df = ticker.copy();
 tick_df['set'] = tick_df['company'].apply(lambda x: set(x.title().split(" ")))
 tick_df['list'] = tick_df['company'].apply(lambda x: x.title().split(" "))
@@ -142,10 +170,11 @@ def findMatches(headline):
 tqdm.pandas(desc="Position Match")
 def appfun(df):
     return df.progress_apply(findMatches, axis=1)
-# matching_results = parallelize(headline_entities, appfun)
-matching_results = appfun(headline_entities)
+matching_results = parallelize(headline_entities, appfun)
+#matching_results = appfun(headline_entities)
 # Compare
 test = headline_entities.copy()
 test['match'] = matching_results
 test['match'] = test['match'].dropna()
 test.to_csv("../data/position_match.csv")
+"""
