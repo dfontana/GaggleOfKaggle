@@ -9,8 +9,8 @@ Guiding Question:
  - Do these phrases reoccur on average?
 
 Task items:
-- Steph: [ ] Prepare the R files and Python notebook for rerunning Sentiment Analysis on the updated headlines
- - [ ] Adjust code to also include the numbers.
+- Steph: [x] Prepare the R files and Python notebook for rerunning Sentiment Analysis on the updated headlines
+ - [x] Adjust code to also include the numbers.
 - Ranier: [ ] Determining stock data changes per date
     - [ ] Evaluate average relative (weighted by the overall stock value) change for each stock
     - [ ] Base it on the stock's closing value, not the others.
