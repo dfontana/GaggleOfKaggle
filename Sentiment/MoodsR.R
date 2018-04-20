@@ -1,23 +1,24 @@
 library(SentimentAnalysis)
 library(readr)
-data = read_csv("C:/Users/Stephanie/DS3001/abcnews-date-text.csv")
+data = read_csv("../data/scraped/combined_headlines.csv")
 data = data.frame(data)
 data$date = as.Date(as.character(data$date), format = "%Y-%m-%d")
 
-start <- as.Date("01-08-14",format="%d-%m-%y")
-end   <- as.Date("08-09-14",format="%d-%m-%y")
+start <- as.Date("2006-01-01",format="%Y-%m-%d")
+end   <- as.Date("2017-12-30",format="%Y-%m-%d")
 
-theDate <- start
+prevDate <- start
+nextDate <- start + 90
 
-while (theDate <= end)
+while (prevDate <= end)
 {
-    yr03 = data[data$date >= "2018-01-01" & data$date < "2018-03-01",]
+    print(format(prevDate,"%Y-%m-%d"))
+    print(format(nextDate,"%Y-%m-%d"))
+    yr03 = data[data$date >= format(prevDate,"%Y-%m-%d") & data$date < format(nextDate,"%Y-%m-%d"),]
     headlines = yr03[,"titles"]
     sentiment = analyzeSentiment(headlines)
-    directions = convertToDirection(sentiment$SentimentQDAP)
-    write.table(directions, file="rsentiments.csv", sep=",", col.names = FALSE,row.names=FALSE, append=TRUE)
-    theDate <- theDate + 90
+    sentiment$direction <- convertToDirection(sentiment$SentimentQDAP)
+    write.table(sentiment, file="test_rsentiments.csv", sep=",", col.names = FALSE,row.names=FALSE, append=TRUE)
+    prevDate <- nextDate + 1
+    nextDate <- prevDate + 90
 }
-
-
-
