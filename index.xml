@@ -1,107 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Black Mirror: Hated in the Nation</title>
-    <link>https://dfontana.github.io/socialimps/</link>
-    <description>Recent content on Black Mirror: Hated in the Nation</description>
+    <title>DS3001: Predicting Australian Stocks</title>
+    <link>https://dfontana.github.io/GaggleOfKaggle/</link>
+    <description>Recent content on DS3001: Predicting Australian Stocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dfontana.github.io/socialimps/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://dfontana.github.io/GaggleOfKaggle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Crime</title>
-      <link>https://dfontana.github.io/socialimps/topics/crime/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Preprocessing</title>
+      <link>https://dfontana.github.io/GaggleOfKaggle/preprocessing/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dfontana.github.io/socialimps/topics/crime/</guid>
-      <description>Crime in Black Mirror: Hated in the Nation In chapter 7 of the textbook, there is a section on hacking that contains a case study about the Firefox extension, Firesheep. The extension, launched in 2010, makes sidejacking easy, even for people without a technical understanding of what they are actually doing. Sidejacking is the act of hijacking an open web session by capturing the user&amp;rsquo;s cookie. This allows the sidejacker to perform actions on the website, while acting as the user.</description>
+      <guid>https://dfontana.github.io/GaggleOfKaggle/preprocessing/</guid>
+      
+        <description>Intent Behind Black Mirror Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&amp;rsquo;s connections with technology. Each episode is independent of the others, set in the &amp;ldquo;alternative present or near future&amp;rdquo;, with a different story and intent. Brooker describes the &amp;ldquo;black mirror&amp;rdquo; referenced to in the title as &amp;ldquo;the one you&amp;rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&amp;rdquo;.</description>
+      
     </item>
     
     <item>
-      <title>Freedom Of Speech</title>
-      <link>https://dfontana.github.io/socialimps/topics/freedomofspeech/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Sentiment Analysis</title>
+      <link>https://dfontana.github.io/GaggleOfKaggle/sentiment/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dfontana.github.io/socialimps/topics/freedomofspeech/</guid>
-      <description>Freedom of Speech in Black Mirror: Hated in the Nation The topic of Freedom of Speech is heavily critiqued in this episode of the British anthology series, Black Mirror. The crux of this episode revolves around a social media hashtag #deathto. The original intent of this hashtag was for every day users of this social media site to express their feelings towards a particular individual. This seems harmless at first - in the United States of America, the First Amendment protects the citizens&amp;rsquo; right to freedom of speech.</description>
+      <guid>https://dfontana.github.io/GaggleOfKaggle/sentiment/</guid>
+      
+        <description>Sentiment Analysis Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&amp;rsquo;s connections with technology. Each episode is independent of the others, set in the &amp;ldquo;alternative present or near future&amp;rdquo;, with a different story and intent. Brooker describes the &amp;ldquo;black mirror&amp;rdquo; referenced to in the title as &amp;ldquo;the one you&amp;rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&amp;rdquo;.</description>
+      
     </item>
     
     <item>
-      <title>Privacy</title>
-      <link>https://dfontana.github.io/socialimps/topics/privacy/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Stitching Data</title>
+      <link>https://dfontana.github.io/GaggleOfKaggle/stitching/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dfontana.github.io/socialimps/topics/privacy/</guid>
-      <description>Privacy in Black Mirror: Hated in the Nation The TV series Black Mirror covers different topics in each episode, including security, data science and robotics. Black Mirror: Hated in the Nation, which is the last episode of this TV series, talks about a controversial topic — privacy.
-After the extinction of bees, the government in the episode invented autonomous bees, named Autonomous Drone Insects (ADIs), to mimic the behavior of bees and act as pollinators across the UK.</description>
-    </item>
-    
-    <item>
-      <title>Maker&#39;s Intent</title>
-      <link>https://dfontana.github.io/socialimps/intent/</link>
-      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://dfontana.github.io/GaggleOfKaggle/stitching/</guid>
       
-      <guid>https://dfontana.github.io/socialimps/intent/</guid>
-      <description>Intent Behind Black Mirror Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&amp;rsquo;s connections with technology. Each episode is independent of the others, set in the &amp;ldquo;alternative present or near future&amp;rdquo;, with a different story and intent. Brooker describes the &amp;ldquo;black mirror&amp;rdquo; referenced to in the title as &amp;ldquo;the one you&amp;rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>Intellectual Property</title>
-      <link>https://dfontana.github.io/socialimps/topics/intellectualproperty/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+        <description>Stitching DataSets Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&amp;rsquo;s connections with technology. Each episode is independent of the others, set in the &amp;ldquo;alternative present or near future&amp;rdquo;, with a different story and intent. Brooker describes the &amp;ldquo;black mirror&amp;rdquo; referenced to in the title as &amp;ldquo;the one you&amp;rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&amp;rdquo;.</description>
       
-      <guid>https://dfontana.github.io/socialimps/topics/intellectualproperty/</guid>
-      <description>As we covered in class, and the text, Intellectual Property is mostly concerned with ownership of a creation/idea - be it through Copyright, Patents, or Trade Secret. In our movie, the matter at hand is a crisis in social media coupled with cybercrime, privacy, and freedom of speech. As such, this topic is not truly relevant to Black Mirror: Hated in the Nation, as the conflict pursued by the film centers on these other issues it finds more pressing.</description>
-    </item>
-    
-    <item>
-      <title>Plot Timeline</title>
-      <link>https://dfontana.github.io/socialimps/timeline/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/timeline/</guid>
-      <description>Setting Starting May 15th in the not-so-distant future (perhaps 50ish years), the episode spans a couple of days following a police detective and her sidekick in London. The two are searching to solve a string of murders seemingly related to Social Media.
-Synopsis. Key characters:
- Karin Parke: Police detective, DCI Blue Colson: Shadowing Parke, used to work for &amp;ldquo;tech crime&amp;rdquo; Shaun Li: NCA officer Rasmus Sjolberg: Head of the ADI program at Granular (company).</description>
-    </item>
-    
-    <item>
-      <title>Technology List</title>
-      <link>https://dfontana.github.io/socialimps/techlist/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/techlist/</guid>
-      <description>Smart Home (Karin&amp;rsquo;s Apartment):  Timestamps: 00:00, 05:00 Description: Her apartment features a keypad lock on the front door, lights that turn on as she walks by, and a remote control that can open the blinds as well as turn on other off-screen devices. Category: Existing, perhaps as of the last few years especially. Realistic: Some of this tech exists today and is making its way into the home. For example, this NYTimes article covers some of the ways the items Karin does in her apartment can be done and more (like voice assistants, or using your phone instead of a remote).</description>
-    </item>
-    
-    <item>
-      <title>Initial Meeting</title>
-      <link>https://dfontana.github.io/socialimps/minutes/meeting4_8/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/minutes/meeting4_8/</guid>
-      <description>Actions Completed  Caught up with one another on the show Listed topics up to Tuesday.  Discussed which were relevant (All but IP)  Divvy&amp;rsquo;d Tasks for Tuesday  Assigned Tasks Topic Posts Take the topic from class and the relevant chapter from the book. Talk about how it relates to the movie as much as possible, critically looking at what the movie may be trying to say, and the implications of what it has to present.</description>
-    </item>
-    
-    <item>
-      <title>Site Resource Credits</title>
-      <link>https://dfontana.github.io/socialimps/credit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/credit/</guid>
-      <description> Images  Black mirror cover image, from the Independent as cited from NetFlix. Black mirror Favicon: TODO  </description>
-    </item>
-    
-    <item>
-      <title>Team Members</title>
-      <link>https://dfontana.github.io/socialimps/members/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/members/</guid>
-      <description> Adam Bettigole Dylan Fontana Samuel Goldman Synella Gonzales Ming Xu  </description>
     </item>
     
   </channel>

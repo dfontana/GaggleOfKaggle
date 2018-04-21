@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sentiment Analysis - DS3001: Predicting Australian Stocks</title>
+  <link rel="alternate" hreflang="en-us" href="https://dfontana.github.io/GaggleOfKaggle/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+  <meta name="description" content="Sentiment Analysis Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&amp;rsquo;s connections with technology. Each episode is independent of the others, set in the &amp;ldquo;alternative present or near future&amp;rdquo;, with a different story and intent. Brooker describes the &amp;ldquo;black mirror&amp;rdquo; referenced to in the title as &amp;ldquo;the one you&amp;rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&amp;rdquo;." />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38.1" />
+
+
+<link rel="canonical" href="https://dfontana.github.io/GaggleOfKaggle/sentiment/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/GaggleOfKaggle/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/GaggleOfKaggle/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/GaggleOfKaggle/favicon-16x16.png">
+<link rel="icon" href="/GaggleOfKaggle/favicon.ico" />
+<link rel="manifest" href="/GaggleOfKaggle/manifest.json">
+<link rel="mask-icon" href="/GaggleOfKaggle/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/GaggleOfKaggle/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+
+<meta property="og:title" content="Sentiment Analysis" />
+<meta property="og:description" content="Sentiment Analysis Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&rsquo;s connections with technology. Each episode is independent of the others, set in the &ldquo;alternative present or near future&rdquo;, with a different story and intent. Brooker describes the &ldquo;black mirror&rdquo; referenced to in the title as &ldquo;the one you&rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&rdquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dfontana.github.io/GaggleOfKaggle/sentiment/" />
+
+
+
+<meta property="article:published_time" content="2018-04-20T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-04-20T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Sentiment Analysis">
+<meta itemprop="description" content="Sentiment Analysis Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&rsquo;s connections with technology. Each episode is independent of the others, set in the &ldquo;alternative present or near future&rdquo;, with a different story and intent. Brooker describes the &ldquo;black mirror&rdquo; referenced to in the title as &ldquo;the one you&rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&rdquo;.">
+
+
+<meta itemprop="datePublished" content="2018-04-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="329">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sentiment Analysis"/>
+<meta name="twitter:description" content="Sentiment Analysis Black Mirror, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&rsquo;s connections with technology. Each episode is independent of the others, set in the &ldquo;alternative present or near future&rdquo;, with a different story and intent. Brooker describes the &ldquo;black mirror&rdquo; referenced to in the title as &ldquo;the one you&rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&rdquo;."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/GaggleOfKaggle/" class="logo">DS3001: Predicting Australian Stocks</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/GaggleOfKaggle/" class="logo">
+    
+      DS3001: Predicting Australian Stocks
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Sentiment Analysis</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-20 </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h2 id="sentiment-analysis">Sentiment Analysis</h2>
+
+<p><a href="http://www.imdb.com/title/tt2085059/?ref_=ttep_ep_tt"><em>Black Mirror</em></a>, created by Charlie Brooker, is a series of variable length television episodes exploring the darker side of society&rsquo;s connections with technology. Each episode is independent of the others, set in the &ldquo;alternative present or near future&rdquo;, with a different story and intent. Brooker describes the &ldquo;black mirror&rdquo; referenced to in the title as <a href="https://www.theguardian.com/technology/2011/dec/01/charlie-brooker-dark-side-gadget-addiction-black-mirror">&ldquo;the one you&rsquo;ll find on every wall, on every desk, in the palm of every hand: the cold, shiny screen of a TV, a monitor, a smartphone&rdquo;</a>. One reviewer (for a different episode) described the show as a whole as showcasing that <a href="https://www.theverge.com/2016/10/24/13379204/black-mirror-season-3-episode-1-nosedive-recap">&ldquo;Technology is exciting, but people are awful&hellip;&rdquo;</a>. Brooker also states that in a way, if technology is a drug, <em>Black Mirror</em> explains the side effects of that drug.</p>
+
+<h2 id="intent-behind-black-mirror-hated-in-the-nation">Intent Behind <em>Black Mirror: Hated in the Nation</em></h2>
+
+<p><a href="http://www.imdb.com/title/tt5709236/?ref_=adv_li_tt"><em>Black Mirror: Hated in the Nation</em></a> explores many different relationships with technology, although the primary focus is society&rsquo;s use of social media. When asked in an interview whether he believes policing twitter is a solution, Brooker responded with hesitancy, stating that &ldquo;social media is an amazing invention&rdquo; and that he supports free speech, while noting that there is a fine line between free speech and &ldquo;targeted abuse&rdquo; (<a href="https://thedebrief.co.uk/things-to-do/tv-and-film/black-mirror-season-3-charlie-brooker-san-junipero/">source</a>). Brooker also says that the punishment for social media users in the episode is too extreme (<a href="http://www.ew.com/article/2016/10/23/black-mirror-postmortem-interview-season-3/">source</a>). Ultimately he said that &ldquo;people should be accountable for what they say&rdquo; (<a href="https://thedebrief.co.uk/things-to-do/tv-and-film/black-mirror-season-3-charlie-brooker-san-junipero/">source</a>). Brooker also stated that <em>Hated in the Nation</em> was inspired in part by his own experience with being publically shamed online after writing a satire piece about George W. Bush (<a href="http://www.bbc.com/news/entertainment-arts-37714850">source</a>).</p>
+
+<p>Overall, the intent behind the episode is to get people thinking about actions they take behind the &ldquo;black mirror&rdquo;. Even if you can&rsquo;t see them, when communicating via social media there&rsquo;s a human on the other end and we should take that into consideration. The episode doesn&rsquo;t provide any answers; its purpose is to point out the problem, because there is likely no single answer.</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+       -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/GaggleOfKaggle/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/GaggleOfKaggle/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/GaggleOfKaggle/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/GaggleOfKaggle/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>

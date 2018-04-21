@@ -1,59 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Black Mirror: Hated in the Nation</title>
-    <link>https://dfontana.github.io/socialimps/categories/</link>
-    <description>Recent content in Categories on Black Mirror: Hated in the Nation</description>
+    <title>Categories on DS3001: Predicting Australian Stocks</title>
+    <link>https://dfontana.github.io/GaggleOfKaggle/categories/</link>
+    <description>Recent content in Categories on DS3001: Predicting Australian Stocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://dfontana.github.io/socialimps/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dfontana.github.io/GaggleOfKaggle/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Intent</title>
-      <link>https://dfontana.github.io/socialimps/categories/intent/</link>
-      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/categories/intent/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Minutes</title>
-      <link>https://dfontana.github.io/socialimps/categories/minutes/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/categories/minutes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plot Timeline</title>
-      <link>https://dfontana.github.io/socialimps/categories/plot-timeline/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/categories/plot-timeline/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech List</title>
-      <link>https://dfontana.github.io/socialimps/categories/tech-list/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/categories/tech-list/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Topics</title>
-      <link>https://dfontana.github.io/socialimps/categories/topics/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dfontana.github.io/socialimps/categories/topics/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
