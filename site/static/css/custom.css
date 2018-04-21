@@ -1,0 +1,9 @@
+.banner-image {
+  margin-bottom: 1.5em;
+  padding-bottom: 30%;
+  background-size: cover;
+  background-position: 50% 25%;
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 0;
+}
