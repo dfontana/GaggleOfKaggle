@@ -2,3 +2,9 @@ baseurl = "https://dfontana.github.io/GaggleOfKaggle/"
 title = "DS3001: Predicting Australian Stocks"
 theme = "jane"
 languageCode = "en-us"
+
+
+[params]
+  since = "2018"
+  homeFullContent = true    # if false, show post summaries on home page.
+  moreMeta = false          # show word count and read time
