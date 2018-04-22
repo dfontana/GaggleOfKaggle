@@ -18,7 +18,7 @@ while (prevDate <= end)
     headlines = yr03[,"titles"]
     sentiment = analyzeSentiment(headlines)
     sentiment$direction <- convertToDirection(sentiment$SentimentQDAP)
-    write.table(sentiment, file="test_rsentiments.csv", sep=",", col.names = FALSE,row.names=FALSE, append=TRUE)
-    prevDate <- nextDate + 1
+    write.table(sentiment, file="test2_rsentiments.csv", sep=",", col.names = FALSE,row.names=FALSE, append=TRUE)
+    prevDate <- nextDate
     nextDate <- prevDate + 90
 }
