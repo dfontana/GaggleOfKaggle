@@ -16,3 +16,8 @@
   float: none !important;
   padding: 0 !important;
 }
+
+.caption {
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

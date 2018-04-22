@@ -3,7 +3,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dfontana.github.io/GaggleOfKaggle/preprocessing/</loc>
+    <loc>https://dfontana.github.io/GaggleOfKaggle/overview/</loc>
+    <lastmod>2018-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dfontana.github.io/GaggleOfKaggle/datasets/</loc>
     <lastmod>2018-04-20T00:00:00+00:00</lastmod>
   </url>
   

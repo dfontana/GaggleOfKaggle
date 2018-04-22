@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>The Data - DS3001: Predicting Australian Stocks</title>
+  <link rel="alternate" hreflang="en-us" href="https://dfontana.github.io/GaggleOfKaggle/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+  <meta name="description" content="Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives." />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38.1" />
+
+
+<link rel="canonical" href="https://dfontana.github.io/GaggleOfKaggle/datasets/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/GaggleOfKaggle/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/GaggleOfKaggle/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/GaggleOfKaggle/favicon-16x16.png">
+<link rel="icon" href="/GaggleOfKaggle/favicon.ico" />
+<link rel="manifest" href="/GaggleOfKaggle/manifest.json">
+<link rel="mask-icon" href="/GaggleOfKaggle/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/GaggleOfKaggle/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+
+<meta property="og:title" content="The Data" />
+<meta property="og:description" content="Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dfontana.github.io/GaggleOfKaggle/datasets/" />
+
+
+
+<meta property="article:published_time" content="2018-04-20T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-04-20T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="The Data">
+<meta itemprop="description" content="Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives.">
+
+
+<meta itemprop="datePublished" content="2018-04-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="271">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Data"/>
+<meta name="twitter:description" content="Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<link href="https://dfontana.github.io/GaggleOfKaggle/css/custom.css" rel="stylesheet" type='text/css' media='all'>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/GaggleOfKaggle/" class="logo">DS3001: Predicting Australian Stocks</a>
+  </div>
+</div>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/GaggleOfKaggle/" class="logo">
+    
+      DS3001: Predicting Australian Stocks
+    
+  </a>
+</div>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">The Data</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-20 </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>Our data initially included two, semi-related datasets from Kaggle. <img align="right" src="/GaggleOfKaggle/img/kaggle.png" width=200px> The first consists of all the headlines written by <a href="http://www.abc.net.au/">The Australian Broadcasting Corp</a> between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in <code>YYYY-MM-DD</code> format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives. The structure of that dataset is exactly the same, but it spans from 2006 instead of 2003 and (more importantly), it preserves the casing and grammer of the original headlines. <em>Spoiler alert:</em> it turns out Natural Language tools rely on word casing to predict named entities within sentences.</p>
+
+<div align=center>
+  <img src="/GaggleOfKaggle/img/headline.png">
+  <div class="caption">Example records from headline data</div>
+</div>
+
+<p>Our second dataset consists of daily stock values for all companies on the <a href="https://www.asx.com.au/">Australian Securities Exchange</a>. 6,475,470 records span from 1997 to the end of 2017, each tracking: the company’s ticker, the date of trade (in <code>YYYY-MM-DD</code> format), the opening/close/high/low price of the stock (all four being numerics representing the stocks value for that date), and the numeric trading volume of the stock for that date.</p>
+
+<div align=center>
+  <img src="/GaggleOfKaggle/img/ticker_value.png">
+  <div class="caption">Example records from ticker value data</div>
+</div>
+
+<p>In addition to stock data for each company, we have a list of tickers associated to their full company name, and that company’s industry (categorical). In total there are 2,227 unique companies with the aforementioned features. It is interesting to note there only 26 unique industries, so we may take competition within industry into account in future modeling.</p>
+
+<div align=center>
+  <img src="/GaggleOfKaggle/img/ticker_industry.png">
+  <div class="caption">Example records from ticker to company association data</div>
+</div>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/GaggleOfKaggle/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/GaggleOfKaggle/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/GaggleOfKaggle/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/GaggleOfKaggle/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>
