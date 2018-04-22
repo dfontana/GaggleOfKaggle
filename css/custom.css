@@ -7,3 +7,12 @@
   position: relative;
   height: 0;
 }
+
+#header {
+  text-align: center;
+}
+
+.logo-wrapper {
+  float: none !important;
+  padding: 0 !important;
+}
