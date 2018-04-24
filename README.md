@@ -15,9 +15,9 @@ Task items:
     - [ ] Evaluate average relative (weighted by the overall stock value) change for each stock
     - [ ] Base it on the stock's closing value, not the others.
     - [ ] Do for each company first, then do the weighted aggreation per industry. Save as two seperate CSVs. CSVs should have date, ticker, and percent change.
-- Steph: [ ] Determine the overall sentiment per day from the headline data (export as CSV: date, overall summed, overall mode).
-    - [ ] Do the mode for the day
-    - [ ] Do the summed sentiment for the day
+- Steph: [x] Determine the overall sentiment per day from the headline data (export as CSV: date, overall summed, overall mode).
+    - [x] Do the mode for the day
+    - [x] Do the summed sentiment for the day
 - [ ] Analysis of Daily Sentiment affect on each Company (2227) and Industry (26)
     - Owen: [ ] Correlate overall sentiment for a day and relative stock change (By company and by industry)
     - Owen: [ ] Logistic Regression setup. Input: Prior N day's sentiment, output next day's change. (By company and by industry). Cross Validate for final metric.
