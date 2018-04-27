@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dfontana.github.io/GaggleOfKaggle/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://dfontana.github.io/GaggleOfKaggle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,10 @@
       <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dfontana.github.io/GaggleOfKaggle/overview/</guid>
-      <description>This site documents the process and results of our Data Science 3001 term project at Worcester Polytechnic Institute. In this project we explore the Data Science process on a data set of our choosing, creating a final product of our choosing. For this project, specifically, we have opted to inspect the following questions:
+      
+        <description>This site documents the process and results of our Data Science 3001 term project at Worcester Polytechnic Institute. In this project we explore the Data Science process on a data set of our choosing, creating a final product of our choosing. For this project, specifically, we have opted to inspect the following questions:
   How does daily overall sentiment affect the value of an industry? What phrases or words impact change within industry value the most?</description>
+      
     </item>
     
     <item>
@@ -27,7 +29,9 @@
       <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dfontana.github.io/GaggleOfKaggle/datasets/</guid>
-      <description>Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives.</description>
+      
+        <description>Our data initially included two, semi-related datasets from Kaggle. The first consists of all the headlines written by The Australian Broadcasting Corp between 2003 and 2017, comprising of 1,103,665 records. Each record tracks the date the headline was published (in YYYY-MM-DD format) and the text within the headline - all words fully lowercased. Later when we talk about stitching our datasets together you will learn we decided to scrap this data set and scrap our own from the ABC archives.</description>
+      
     </item>
     
     <item>
@@ -36,8 +40,10 @@
       <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dfontana.github.io/GaggleOfKaggle/sentiment/</guid>
-      <description>Sentiment Distribution To better understand the mood of our headlines, we needed to look at the distribution of Sentiment expressed by them; whether they were Positive, Neutral, or Negative. To do this we attempted both an analysis in the Python Textblob library, which is built atop NLTK and in the R Sentiment Analysis library.
+      
+        <description>Sentiment Distribution To better understand the mood of our headlines, we needed to look at the distribution of Sentiment expressed by them; whether they were Positive, Neutral, or Negative. To do this we attempted both an analysis in the Python Textblob library, which is built atop NLTK and in the R Sentiment Analysis library.
 R Sentiment (Left) vs. Python Sentiment (Right)  We found the two used slightly different approaches towards identifying sentiment, and as a result, the R library was able to tease out more information than the Textblob option, as shown above.</description>
+      
     </item>
     
     <item>
@@ -46,8 +52,10 @@ R Sentiment (Left) vs. Python Sentiment (Right)  We found the two used slightly 
       <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dfontana.github.io/GaggleOfKaggle/stitching/</guid>
-      <description>How does daily overall sentiment affect the value of an industry?
+      
+        <description>How does daily overall sentiment affect the value of an industry?
  When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date.</description>
+      
     </item>
     
   </channel>
