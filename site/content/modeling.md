@@ -74,6 +74,6 @@ For our network, the structure looked as such:
   <div class="caption">Our neural network had two hidden layers - one of 40 nodes and another of 2</div>
 </div>
 
-At a very high level (with lots of hand waving) the network works as follows. The input neuron received the prior day's sentiment. This value was fed into 40 neurons in the first layer (called a hidden layer). These 40 neurons processed the value, and after accounting for their weight, fed it to the next hidden layer of two neurons. Then these two fed into the output neuron. 
+At a very high level (with lots of hand waving) the network works as follows. The input neuron received the prior day's sentiment. This value was fed into 40 neurons in the first layer (called a hidden layer). These 40 neurons processed the value, and after accounting for their weight, fed it to the next hidden layer of two neurons. Then these two fed into the output neuron.
 
 We found a classification accuracy of 62% in the best case for this type of model. While there is much more that can be done in terms of trying alternate styles of neural networks (like Recurrent Neural Networks, which are suitable for time based data), there's more to be said about the model evaluation. Unlike the SVM, we can't easily plot this model's training to see if there's anything hidden in the details. Ideally we'd want to look at other evaluation metrics (such as F1-Score) and the graph of the training itself, to understand if the training converged or just happened to end at 62% accuracy.
