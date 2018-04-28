@@ -16,7 +16,7 @@ We started this project asking a very simple question - or so we thought. We wan
 
 Ideally from here we'd like to work more on the Named Entity Extraction process so we can truly connect a headline with a specific business. If we can't isolate that a headline is related to a specific company or industry, then there's not much sentiment can tell us other than how the general market may be doing. Working on optimizing the neural network model after that would be ideal - our presented models show some early promises that could be better tuned. [HyperOpt](https://github.com/hyperopt/hyperopt) is a great library to help automate the searching of models, but we might want to first revisit the type of Neural Network we used.
 
-## The bigger picture
+The bigger picture
 --------------
 
 There's lots of ways to gain insight on Stocks: [MACD](https://www.investopedia.com/terms/m/macd.asp), [Support and Resistance](https://www.investopedia.com/trading/support-and-resistance-basics/), [Relative Strength Index](https://www.investopedia.com/terms/r/rsi.asp)... amoung many others. For example, here's a basic regression predicting the stock value direction based on closing prices *30 days prior*.
