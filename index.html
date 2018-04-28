@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.38.2" />
+<meta name="generator" content="Hugo 0.38.1" />
 
 
 <link rel="canonical" href="https://dfontana.github.io/GaggleOfKaggle/" />
@@ -40,13 +40,12 @@
 
 
 
+<link rel="apple-touch-icon" sizes="180x180" href="/GaggleOfKaggle/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/GaggleOfKaggle/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/GaggleOfKaggle/favicon-16x16.png">
 <link rel="icon" href="/GaggleOfKaggle/favicon.ico" />
-
-
-
-
-
-
+<link rel="manifest" href="/GaggleOfKaggle/manifest.json">
+<link rel="mask-icon" href="/GaggleOfKaggle/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -218,10 +217,61 @@ R Sentiment (Left) vs. Python Sentiment (Right)  We found the two used slightly 
     
     <div class="post-summary">
       How does daily overall sentiment affect the value of an industry?
- When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date.
+ When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date.
     </div>
     <div class="read-more">
       <a href="/GaggleOfKaggle/stitching/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/GaggleOfKaggle/modeling/">Creating Models</a></h1>
+    
+    <div class="post-meta">
+      <span class="post-time"> 2018-04-28 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      How does daily overall sentiment affect the value of an industry?
+ With our datasets now joined we could make a series of models that would attempt to predict the value of a stock based on sentiment. We tried three types: Support Vector Regression, Support Vector Machine, and a Multilayer Perceptron (Neural Network). These models were based on either individual companies (so just predicting one company&rsquo;s stock) or individual industries (like predicting the value of Food &amp; Beverage).
+    </div>
+    <div class="read-more">
+      <a href="/GaggleOfKaggle/modeling/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/GaggleOfKaggle/conclusion/">Conclusion and Final Thoughts</a></h1>
+    
+    <div class="post-meta">
+      <span class="post-time"> 2018-04-28 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      How does daily overall sentiment affect the value of an industry?
+ We started this project asking a very simple question - or so we thought. We wanted to know how the attitude towards a company could impact its stock&rsquo;s value. It turns out that question brings a lot more weight than we could have anticipated:
+ Finding companies in headlines is hard - it&rsquo;s a working problem in NLP!
+    </div>
+    <div class="read-more">
+      <a href="/GaggleOfKaggle/conclusion/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -260,7 +310,7 @@ R Sentiment (Left) vs. Python Sentiment (Right)  We found the two used slightly 
 
     <footer id="footer" class="footer">
       <div class="social-links">
-  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" type="application/rss+xml" class="iconfont icon-rss"
     title="rss" target="_blank">
   </a>
 </div>
@@ -288,11 +338,11 @@ R Sentiment (Left) vs. Python Sentiment (Right)  We found the two used slightly 
     </div>
   </div>
   
+<script src="/GaggleOfKaggle/lib/highlight/highlight.pack.js?v=20171001"></script>
 <script type="text/javascript" src="/GaggleOfKaggle/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/GaggleOfKaggle/lib/slideout/slideout-1.0.1.min.js"></script>
   
 <script type="text/javascript" src="/GaggleOfKaggle/dist/jane.min.js?v=2.7.0"></script>
-
 
 
 

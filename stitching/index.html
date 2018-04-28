@@ -26,7 +26,7 @@
 
 
   <meta name="description" content="How does daily overall sentiment affect the value of an industry?
- When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date." />
+ When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date." />
 
 
 
@@ -34,20 +34,19 @@
 
 
 
-<meta name="generator" content="Hugo 0.38.2" />
+<meta name="generator" content="Hugo 0.38.1" />
 
 
 <link rel="canonical" href="https://dfontana.github.io/GaggleOfKaggle/stitching/" />
 
 
 
+<link rel="apple-touch-icon" sizes="180x180" href="/GaggleOfKaggle/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/GaggleOfKaggle/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/GaggleOfKaggle/favicon-16x16.png">
 <link rel="icon" href="/GaggleOfKaggle/favicon.ico" />
-
-
-
-
-
-
+<link rel="manifest" href="/GaggleOfKaggle/manifest.json">
+<link rel="mask-icon" href="/GaggleOfKaggle/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -60,7 +59,7 @@
 
 <meta property="og:title" content="Stitching Data" />
 <meta property="og:description" content="How does daily overall sentiment affect the value of an industry?
- When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date." />
+ When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dfontana.github.io/GaggleOfKaggle/stitching/" />
 
@@ -82,7 +81,7 @@
 
 <meta itemprop="name" content="Stitching Data">
 <meta itemprop="description" content="How does daily overall sentiment affect the value of an industry?
- When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date.">
+ When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date.">
 
 
 <meta itemprop="datePublished" content="2018-04-20T00:00:00&#43;00:00" />
@@ -95,7 +94,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Stitching Data"/>
 <meta name="twitter:description" content="How does daily overall sentiment affect the value of an industry?
- When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date."/>
+ When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -154,7 +153,7 @@
 <p>How does daily overall sentiment affect the value of an industry?</p>
 </blockquote>
 
-<p>When trying to answer a question about affect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date. This task is much more involved than first meets the eye, as one data set includes the fully qualified name of a company (i.e. <code>QANTAS AIRWAYS LIMITED</code>) while the other uses their names in a more colloqual manner within a sentence (i.e. <code>security tightens for qantas in response to recent events</code>). This presents challanges such as:</p>
+<p>When trying to answer a question about effect of one dataset on another, it necessitates the joining of the two. As a result, our next step was to combine our ticker data with the headline data itself, associating each company with a headline so we could see how the sentiment express impacted the value of their stock for that date. This task is much more involved than first meets the eye, as one data set includes the fully qualified name of a company (i.e. <code>QANTAS AIRWAYS LIMITED</code>) while the other uses their names in a more colloquial manner within a sentence (i.e. <code>security tightens for qantas in response to recent events</code>). This presents challenges such as:</p>
 
 <ul>
 <li>How to match abbreviated or partial company names?</li>
@@ -181,7 +180,7 @@ matching_results = parallelize(headlines, appfun)
 
 <p>We found this approach led to a lot of false matches due to longer substrings in headlines that matched part of a company name was valued more than a unique identifier in the company name (&lsquo;quantas&rsquo; wasn&rsquo;t matching better than the generic term &lsquo;solutions&rsquo;). After toying with various fuzzy matching configurations our results weren&rsquo;t improving and the time to run the entire process was growing, eventually requiring us to write parallelization code to process chunks of the entire dataset on different CPU threads (8-Cores).</p>
 
-<p>To address this we tried several NLTK approaches combined with the Fuzzy Matching, with the thought being we should remove non-nouns from the headlines to reduce the chances of non-name words from matching with our names. This would, in theory, only keep imporant terms necessary for matching. To speed up time, we also filtered out headlines that contained no parts of any company names (thus informing us we wouldn&rsquo;t be able to create a match at all).</p>
+<p>To address this we tried several NLTK approaches combined with the Fuzzy Matching, with the thought being we should remove non-nouns from the headlines to reduce the chances of non-name words from matching with our names. This would, in theory, only keep important terms necessary for matching. To speed up time, we also filtered out headlines that contained no parts of any company names (thus informing us we wouldn&rsquo;t be able to create a match at all).</p>
 
 <pre><code class="language-python">def fuzzy_match(x, choices, scorer, cutoff):
     tags = nltk.tag.pos_tag(x.split())
@@ -191,11 +190,11 @@ matching_results = parallelize(headlines, appfun)
     return process.extractOne(filtered, choices=choices, scorer=scorer, score_cutoff=cutoff)
 </code></pre>
 
-<p>This approach dramatically reduced matches that shouldn&rsquo;t have been paired at all, but took 4-5 hours to run and still was producing poor matches when a match was made. We also found that NLTK wasn&rsquo;t able to identify Nouns quite right, due to its need for sentences to have proper grammer (so Proper Nounds, for example, should be capitalized). Since the author of our dataset decided to lowercase all strings, we lost this critical information NLTK needed to properly process phrases.</p>
+<p>This approach dramatically reduced matches that shouldn&rsquo;t have been paired at all, but took 4-5 hours to run and still was producing poor matches when a match was made. We also found that NLTK wasn&rsquo;t able to identify Nouns quite right, due to its need for sentences to have proper grammar (so Proper Nouns, for example, should be capitalized). Since the author of our dataset decided to lowercase all strings, we lost this critical information NLTK needed to properly process phrases.</p>
 
 <h2 id="solution-2-position-based-matching">Solution 2: Position Based Matching</h2>
 
-<p>With this in mind we tried a more custom algorithm for matching instead of fuzzy matching that tried to weigh terms in a comapny&rsquo;s name by the rank within the title. For example, when matching &ldquo;QANTAS AIRWAYS LIMITED&rdquo; the algorithm would value a match of &ldquo;Qantas&rdquo; more than if the next word &ldquo;Airways&rdquo; matched, and it would weigh &ldquo;LIMITED&rdquo; even lesser. This would encourage &ldquo;Qantas&rdquo; to reign as the corret match rather than if another company with the term &ldquo;limited&rdquo; had matched. We sped this computation up by creating sets out of the terms in both headlines and company names, and then performing set intersection to determine if words matched. Even after all of that, however, results were poor and slow. Below is the abbreviated algorithm, giving you the gist of what it was doing.</p>
+<p>With this in mind we tried a more custom algorithm for matching instead of fuzzy matching that tried to weigh terms in a company&rsquo;s name by the rank within the title. For example, when matching &ldquo;QANTAS AIRWAYS LIMITED&rdquo; the algorithm would value a match of &ldquo;Qantas&rdquo; more than if the next word &ldquo;Airways&rdquo; matched, and it would weigh &ldquo;LIMITED&rdquo; even lesser. This would encourage &ldquo;Qantas&rdquo; to reign as the correct match rather than if another company with the term &ldquo;limited&rdquo; had matched. We sped this computation up by creating sets out of the terms in both headlines and company names, and then performing set intersection to determine if words matched. Even after all of that, however, results were poor and slow. Below is the abbreviated algorithm, giving you the gist of what it was doing.</p>
 
 <pre><code class="language-python"># 1. Make sets from companies and headlines in their stripped form.
 ticker['company_set'] = ticker['company'].apply(lambda x: set(normalize(x)))
@@ -220,7 +219,7 @@ def findMatches(headline):
 
 <h2 id="solution-3-scrape-the-data">Solution 3: Scrape the Data</h2>
 
-<p>Given what we really wanted to find was the subject of each sentence we knew we needed to have our headlines in proper gramatical form. To solve this we ended up rescraping our data from the ABC Archives. This meant we could only go as far back as 2006, but we could at least get well-formed data. We did this with the ScraPy library, which is a more powerful version of BeautifulSoup one may argue designed to crawl from page to page while adhering to the Robots.txt of the sites it visits.</p>
+<p>Given what we really wanted to find was the subject of each sentence we knew we needed to have our headlines in proper grammatical form. To solve this we ended up rescraping our data from the ABC Archives. This meant we could only go as far back as 2006, but we could at least get well-formed data. We did this with the ScraPy library, which is a more powerful version of BeautifulSoup one may argue designed to crawl from page to page while adhering to the Robots.txt of the sites it visits.</p>
 
 <pre><code class="language-python">class NewsScraper(scrapy.Spider):
 
@@ -251,7 +250,7 @@ def findMatches(headline):
 
 <p>The above code is more or less the entirety of the scraper - it turns out ScraPy is very easy to use! We ran this code on a Raspberry Pi and 4 days later had all of our headlines. Four days sounds like the process was slow, but the Robots.txt of ABC requested that all scrapers wait 5 seconds between making requests, which meant we were limited not by processing power.</p>
 
-<p>After scraping the data, no preprocessing had to be done beyond stripping excess whitespace from the ends of the headlines. We took this and ran it back through Solutions 1 and 2 of this post, sadly finding performance was still sub-par. It turns out NLTK was still struggling to identify nouns very well. Upon this realization we came across another NLP library for Python called SpaCy. SpaCy had the key differences that it was designed for Named Entity Recognition as one of its core functions (through using a combination of word vector analysis and known dictionary of entities). Using this we found huge success in identifing subjects of sentences:</p>
+<p>After scraping the data, no preprocessing had to be done beyond stripping excess whitespace from the ends of the headlines. We took this and ran it back through Solutions 1 and 2 of this post, sadly finding performance was still sub-par. It turns out NLTK was still struggling to identify nouns very well. Upon this realization we came across another NLP library for Python called SpaCy. SpaCy had the key differences that it was designed for Named Entity Recognition as one of its core functions (through using a combination of word vector analysis and known dictionary of entities). Using this we found huge success in identifying subjects of sentences:</p>
 
 <pre><code class="language-python">for doc in nlp.pipe(sample_test['titles'].astype('unicode').values, batch_size=50,
                         n_threads=3):
@@ -296,7 +295,7 @@ sample_test['subject_sim'] = sample_test['subject'].apply(find_most)
 sample_test.head(500)
 </code></pre>
 
-<p>Yet even with that, we still failed to find matches reliably. Having solved the core issue of identifying entities within our headlines, we still couldn&rsquo;t match our two list of entities. The largest reason being that our list of entities were their full names and not their colloquial names, which meant that since headlines weren&rsquo;t using the entire name of a corporation we couldn&rsquo;t get reliable matches. The only solution from here would have been to rebuild our list of companies using common namings of them rather than their full names, but given we were now short for time, this really wasn&rsquo;t an option. Converting such a list would require knowledge of how a company may be referred to or some list of alternative names that we did not posess. As a final solution, we decided to alter our question slightly:</p>
+<p>Yet even with that, we still failed to find matches reliably. Having solved the core issue of identifying entities within our headlines, we still couldn&rsquo;t match our two list of entities. The largest reason being that our list of entities were their full names and not their colloquial names, which meant that since headlines weren&rsquo;t using the entire name of a corporation we couldn&rsquo;t get reliable matches. The only solution from here would have been to rebuild our list of companies using common namings of them rather than their full names, but given we were now short for time, this really wasn&rsquo;t an option. Converting such a list would require knowledge of how a company may be referred to or some list of alternative names that we did not possess. As a final solution, we decided to alter our question slightly:</p>
 
 <blockquote>
 <p>Instead of asking how sentiment might affect a <strong>company&rsquo;s</strong> value, we now asked how might a day&rsquo;s net sentiment affect an <strong>industry&rsquo;s</strong> value.</p>
@@ -335,7 +334,7 @@ sample_test.head(500)
 
     <footer id="footer" class="footer">
       <div class="social-links">
-  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+  <a href="https://dfontana.github.io/GaggleOfKaggle/index.xml" type="application/rss+xml" class="iconfont icon-rss"
     title="rss" target="_blank">
   </a>
 </div>
@@ -363,11 +362,11 @@ sample_test.head(500)
     </div>
   </div>
   
+<script src="/GaggleOfKaggle/lib/highlight/highlight.pack.js?v=20171001"></script>
 <script type="text/javascript" src="/GaggleOfKaggle/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/GaggleOfKaggle/lib/slideout/slideout-1.0.1.min.js"></script>
   
 <script type="text/javascript" src="/GaggleOfKaggle/dist/jane.min.js?v=2.7.0"></script>
-
 
 
 
