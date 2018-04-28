@@ -2,9 +2,9 @@
 
 Stock market data comparison to Australian headlines - can we predict the direction of a company's stock?
 
-## Site
+## [**Site Here!**](https://dfontana.github.io/GaggleOfKaggle/)
 
-For more information about this project please see its [**Site Here!**](https://dfontana.github.io/GaggleOfKaggle/) There you will find more about:
+For more information about this project please see its [site](https://dfontana.github.io/GaggleOfKaggle/) There you will find more about:
 
 - What the project aimed to accomplish
 - The process it followed
