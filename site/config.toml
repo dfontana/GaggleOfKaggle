@@ -8,3 +8,4 @@ languageCode = "en-us"
   since = "2018"
   homeFullContent = true    # if false, show post summaries on home page.
   moreMeta = false          # show word count and read time
+  authors = "Dylan Fontana, Stephanie Martin, Owen Chace, Ranier Gran"
